@@ -1,8 +1,0 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name = "TestALL">
-    <test name = "case1">
-        <classes>
-            <class name = "online.hayho.core.api.test.TestApiAll" />
-        </classes>
-    </test>
-</suite>
