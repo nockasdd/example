@@ -4,7 +4,7 @@
 <%@include file="/common/taglib.jsp"%>
 <html>
 <head>
-    <title><dec:title default="Home - WEB" </title>
+    <title>Home - WEB</title>
 </head>
 <body>
     <h1>Trang Chủ Nè</h1>

@@ -10,13 +10,11 @@ import java.io.IOException;
 
 @WebServlet("/admin-home.html")
 public class AdminController extends HttpServlet {
-    protected void doget(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
-        RequestDispatcher rd = request.getRequestDispatcher("/views/admin/admin.jsp");
-        rd.forward(request,response);
-    }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        RequestDispatcher rd = req.getRequestDispatcher("/views/admin/admin.jsp");
+        rd.forward(req,resp);
+    }
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     }
 }

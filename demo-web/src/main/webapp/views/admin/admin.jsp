@@ -4,8 +4,7 @@
 <%@include file="/common/taglib.jsp"%>
 <html>
 <head>
-    <title><dec:title default="Admin Nè"/> </title>
-    <dec:head/>
+    <title>Admin Nè </title>
 </head>
 <body>
     <h1>Trang Admin Nè</h1>
