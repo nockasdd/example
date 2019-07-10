@@ -15,12 +15,12 @@ public class UserEntity {
     private  String name;
 
     @Column(name = "password")
-    private  String passWord;
+    private  String password;
 
     @Column(name = "fullname")
     private  String fullName;
 
-    @Column(name = "createdate")
+    @Column(name = "createddate")
     private Timestamp createdDate;
 
     @ManyToOne
@@ -46,15 +46,7 @@ public class UserEntity {
         this.name = name;
     }
 
-    public String getPassWord() {
-        return passWord;
-    }
-
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
-    }
-
-    public String getFullName() {
+     public String getFullName() {
         return fullName;
     }
 
@@ -84,5 +76,13 @@ public class UserEntity {
 
     public void setCommentEntityList(List<CommentEntity> commentEntityList) {
         this.commentEntityList = commentEntityList;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
