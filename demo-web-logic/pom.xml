@@ -11,6 +11,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>demo-web-logic</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>online.hayho</groupId>
+            <artifactId>demo-core-web</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>online.hayho</groupId>
+            <artifactId>demo-core-dto</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>

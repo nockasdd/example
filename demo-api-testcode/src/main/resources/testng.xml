@@ -2,7 +2,7 @@
 <suite name = "TestALL">
     <test name = "case1">
         <classes>
-            <class name = "online.hayho.core.api.test.TestApiAll" />
+            <class name = "TestAPi" />
         </classes>
     </test>
 </suite>

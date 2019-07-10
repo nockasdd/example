@@ -6,19 +6,10 @@
         <artifactId>demo</artifactId>
         <groupId>online.hayho</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-core-web</artifactId>
-    <dependencies>
-        <dependency>
-            <groupId>commons-beanutils</groupId>
-            <artifactId>commons-beanutils</artifactId>
-            <version>1.9.3</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
+    <artifactId>demo-api-testcode</artifactId>
 
 
 </project>
