@@ -8,7 +8,7 @@ public class UserBeanUtil {
         UserDTO dto = new UserDTO();
         dto.setUserId(entity.getUserId());
         dto.setName(entity.getName());
-        dto.setPassWord(entity.getPassWord());
+        dto.setPassword(entity.getPassword());
         dto.setFullName(entity.getFullName());
         dto.setCreatedDate(entity.getCreatedDate());
         dto.setRoleDTO(RoleBeanUtil.entitytoDto(entity.getRoleEntity()));
@@ -18,7 +18,7 @@ public class UserBeanUtil {
         UserEntity entity = new UserEntity();
         entity.setUserId(entity.getUserId());
         entity.setName(entity.getName());
-        entity.setPassWord(entity.getPassWord());
+        entity.setPassword(entity.getPassword());
         entity.setFullName(entity.getFullName());
         entity.setCreatedDate(entity.getCreatedDate());
         entity.setRoleEntity(RoleBeanUtil.dto2Entity(dto.getRoleDTO()));

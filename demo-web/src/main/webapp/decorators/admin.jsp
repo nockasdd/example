@@ -25,17 +25,21 @@
 
     <!-- Gritter -->
     <link href="<c:url value="/template/admin/js/plugins/gritter/jquery.gritter.css"/>" rel="stylesheet">
-
+    <link href="<c:url value="/template/admin/css/plugins/jsTree/style.min.css"/>"  rel="stylesheet">
     <link href="<c:url value="/template/admin/css/animate.css"/>" rel="stylesheet">
     <link href="<c:url value="/template/admin/css/style.css"/>" rel="stylesheet">
     <dec:head/>
 </head>
 <body>
 <div id="wrapper">
-<%@ include file="/common/admin/header.jsp" %>
-<%@ include file="/common/admin/menu.jsp" %>
-<dec:body/>
-<%--<%@ include file="/common/admin/footer.jsp" %>--%>
+    <%@ include file="/common/admin/menu.jsp" %>
+    <div id="page-wrapper" class="gray-bg">
+        <%@ include file="/common/admin/header.jsp" %>
+        <dec:body/>
+        <%@ include file="/common/admin/footer.jsp" %>
+    </div>
+
+
 </div>
 
 <!-- Mainly scripts -->
@@ -77,6 +81,134 @@
 
 <!-- Toastr -->
 <script src="<c:url value="/template/admin/js/plugins/toastr/toastr.min.js"/>"></script>
+<script src="<c:url value="/template/admin/js/plugins/jsTree/jstree.min.js"/>"></script>
+<style>
+    .jstree-open > .jstree-anchor > .fa-folder:before {
+        content: "\f07c";
+    }
 
+    .jstree-default .jstree-icon.none {
+        width: 0;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+
+        $('#jstree1').jstree({
+            'core': {
+                'check_callback': true
+            },
+            'plugins': ['types', 'dnd'],
+            'types': {
+                'default': {
+                    'icon': 'fa fa-folder'
+                },
+                'html': {
+                    'icon': 'fa fa-file-code-o'
+                },
+                'svg': {
+                    'icon': 'fa fa-file-picture-o'
+                },
+                'css': {
+                    'icon': 'fa fa-file-code-o'
+                },
+                'img': {
+                    'icon': 'fa fa-file-image-o'
+                },
+                'js': {
+                    'icon': 'fa fa-file-text-o'
+                }
+
+            }
+        });
+
+        $('#using_json').jstree({
+            'core': {
+                'data': [
+                    'Empty Folder',
+                    {
+                        'text': 'Resources',
+                        'state': {
+                            'opened': true
+                        },
+                        'children': [
+                            {
+                                'text': 'css',
+                                'children': [
+                                    {
+                                        'text': 'animate.css', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'bootstrap.css', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'main.css', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'style.css', 'icon': 'none'
+                                    }
+                                ],
+                                'state': {
+                                    'opened': true
+                                }
+                            },
+                            {
+                                'text': 'js',
+                                'children': [
+                                    {
+                                        'text': 'bootstrap.js', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'inspinia.min.js', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'jquery.min.js', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'jsTree.min.js', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'custom.min.js', 'icon': 'none'
+                                    }
+                                ],
+                                'state': {
+                                    'opened': true
+                                }
+                            },
+                            {
+                                'text': 'html',
+                                'children': [
+                                    {
+                                        'text': 'layout.html', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'navigation.html', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'navbar.html', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'footer.html', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'sidebar.html', 'icon': 'none'
+                                    }
+                                ],
+                                'state': {
+                                    'opened': true
+                                }
+                            }
+                        ]
+                    },
+                    'Fonts',
+                    'Images',
+                    'Scripts',
+                    'Templates',
+                ]
+            }
+        });
+
+    });
+</script>
 </body>
 </html>

@@ -6,34 +6,21 @@ import java.sql.Timestamp;
 public class UserDTO implements Serializable {
     private  Integer userId;
     private  String name;
-    private  String passWord;
+    private  String password;
     private  String fullName;
     private Timestamp createdDate;
     private RoleDTO roleDTO ;
 
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name){
         this.name = name;
     }
 
-    public String getPassWord() {
-        return passWord;
-    }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
-    }
 
     public String getFullName() {
         return fullName;
@@ -57,5 +44,21 @@ public class UserDTO implements Serializable {
 
     public void setRoleDTO(RoleDTO roleDTO) {
         this.roleDTO = roleDTO;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

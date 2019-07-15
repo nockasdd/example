@@ -1,4 +1,6 @@
+import online.hayho.core.dao.ListenGuidelineDao;
 import online.hayho.core.dao.UserDao;
+import online.hayho.core.daoimpl.ListenGuidelineImpl;
 import online.hayho.core.daoimpl.UserDaoImpl;
 import online.hayho.core.persistence.entity.UserEntity;
 import org.apache.log4j.Logger;
@@ -13,7 +15,7 @@ public class TestAPi {
         UserDao userDao = new UserDaoImpl();
         String name = "admin";
         String password = "123456";
-        UserEntity entity = userDao.isUserExitst(name, password);
+        UserEntity entity = userDao.findByUser(name, password);
         if(entity != null) {
             log.error("Login Sucess");
         }else{
@@ -25,8 +27,15 @@ public class TestAPi {
         UserDao userDao = new UserDaoImpl();
         String name = "admin";
         String password = "123456";
-        UserEntity entity = userDao.findRoleByUser(name, password);
+        UserEntity entity = userDao.findByUser(name, password);
         log.error(entity.getRoleEntity().getRoleid() + "-" + entity.getRoleEntity().getName());
 
     }
+    @Test
+    public void checkFindProperty(){
+        ListenGuidelineDao listenGuidelineDao = new ListenGuidelineImpl();
+       // Object[] result = listenGuidelineDao.findByProperty(null,null,null,null,2,2);
+    }
+
+
 }

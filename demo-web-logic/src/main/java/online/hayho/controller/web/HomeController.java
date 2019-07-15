@@ -11,7 +11,7 @@ import java.io.IOException;
 @WebServlet("/home.html")
 public class HomeController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher rd = req.getRequestDispatcher("/views/web/web.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/views/web/index.jsp");
         rd.forward(req,resp);
     }
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

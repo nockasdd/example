@@ -3,6 +3,9 @@
     <test name = "case1">
         <classes>
             <class name = "TestAPi" />
+            <class name = "ListenGuidelineTest" />
+            <class name = "online.hayho.api.testcode.model.Book" />
+            <class name = "online.hayho.api.testcode.model.ReviewHashMap" />
         </classes>
     </test>
 </suite>

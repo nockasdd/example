@@ -3,22 +3,25 @@ Author: Thái Văn Tùng
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="/common/taglib.jsp"%>
+<c:url var="formUrl" value="/login.html"/>
 <html>
 <head>
     <title><fmt:message key="label.test" bundle="${lang}"/></title>
 </head>
 <body>
 <h3>Welcome to IN+</h3>
-<p>Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.
-    <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
-</p>
-<p>Login in. To see it in action.</p>
-<form class="m-t" role="form" action="index.html">
+<form class="m-t" role="form" action="${formUrl}" method="post">
+    <c:if test="${not empty messageResponse}">
+    <div class="alert alert-${alert} alert-dismissable">
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+        <a> ${messageResponse} </a>.
+    </div>
+    </c:if>
     <div class="form-group">
-        <input type="email" class="form-control" placeholder="Username" required="">
+        <input type="text" class="form-control" placeholder="Username" required="" name="pojo.name">
     </div>
     <div class="form-group">
-        <input type="password" class="form-control" placeholder="Password" required="">
+        <input type="password" class="form-control" placeholder="Password" required="" name="pojo.password">
     </div>
     <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
 
